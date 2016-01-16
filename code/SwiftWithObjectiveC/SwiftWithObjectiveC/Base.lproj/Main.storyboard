@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftWithObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-cg-n46">
+                                <rect key="frame" x="36" y="20" width="80" height="30"/>
+                                <state key="normal" title="SwiftCallOc"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djh-Fr-VTO">
+                                <rect key="frame" x="249" y="285" width="102" height="30"/>
+                                <state key="normal" title="Goto OCSence"/>
+                                <connections>
+                                    <segue destination="yW0-eC-Pl0" kind="modal" id="GiR-vs-G48"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Db7-cg-n46" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="6Kf-fv-yW8"/>
+                            <constraint firstItem="djh-Fr-VTO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G4v-L4-atr"/>
+                            <constraint firstItem="Db7-cg-n46" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bE8-FA-5Hf"/>
+                            <constraint firstItem="djh-Fr-VTO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zU5-FT-ZH0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="Db7-cg-n46" id="V31-EI-pbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="rKu-hL-7ma">
+            <objects>
+                <viewController id="yW0-eC-Pl0" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PJI-1G-Siw"/>
+                        <viewControllerLayoutGuide type="bottom" id="EdZ-M6-fCM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s57-nw-glX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-yJ-Jrw" customClass="CustomerView" customModule="SwiftWithObjectiveC" customModuleProvider="target">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2z6-2t-osX"/>
+                                    <constraint firstAttribute="height" constant="128" id="WCN-xz-Yfy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sGD-yJ-Jrw" firstAttribute="centerX" secondItem="s57-nw-glX" secondAttribute="centerX" id="Z4z-Ke-sEI"/>
+                            <constraint firstItem="sGD-yJ-Jrw" firstAttribute="centerY" secondItem="s57-nw-glX" secondAttribute="centerY" id="azM-cq-uSN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customerView" destination="sGD-yJ-Jrw" id="wdA-R0-mZg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nyr-08-pv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="-39"/>
+        </scene>
+    </scenes>
+</document>
